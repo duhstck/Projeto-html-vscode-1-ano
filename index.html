@@ -6,63 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Blog Tech</title>
 
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #278af5;
-            color: white;
-            text-align: center;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 16px;
-            border-radius: 10px;
-        }
-
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-        }
-
-        article {
-            display: flex;
-            background-color: white;
-            color: #183C63;
-            padding: 16px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-        }
-
-        img {
-            width: 80px;
-            height: 80px;
-            margin-right: 20px;
-        }
-
-        .artigo-autor {
-            font-weight: bold;
-        }
-
-        button {
-            margin-right: 10px;
-            padding: 8px 12px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            background-color: white;
-        }
-
-        button:hover {
-            background-color: #f0f0f0;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -124,39 +68,11 @@
 
         </article>
 
+        <button class="btn-tema-escuro">🌙</button>
+
     </main>
 
-    <script>
-
-        const botoes = document.querySelectorAll("button");
-
-        botoes.forEach(function (botao) {
-
-            let curtiu = false;
-
-            botao.addEventListener("click", botaoClicado);
-
-            function botaoClicado() {
-
-                let texto = botao.querySelector("span");
-
-                if (curtiu === false) {
-
-                    texto.textContent++;
-                    curtiu = true;
-
-                } else {
-
-                    texto.textContent--;
-                    curtiu = false;
-
-                }
-
-            }
-
-        });
-
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
